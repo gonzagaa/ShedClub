@@ -88,19 +88,19 @@
 }
 
 #programacao .container .box:nth-child(1) {
-    background-image: url(../assets/exemplo\ 1.png);
+    background-image: url(../assets/exemplo\ 1.webp);
 }
 
 #programacao .container .box:nth-child(2) {
-    background-image: url(../assets/exemplo\ 2.png);
+    background-image: url(../assets/exemplo\ 2.webp);
 }
 
 #programacao .container .box:nth-child(3) {
-    background-image: url(../assets/exemplo\ 3.png);
+    background-image: url(../assets/exemplo\ 3.webp);
 }
 
 #programacao .container .box:nth-child(4) {
-    background-image: url(../assets/exemplo\ 4.png);
+    background-image: url(../assets/exemplo\ 4.webp);
 }
 
 #programacao .container .box::before {
