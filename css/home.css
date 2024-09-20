@@ -1,0 +1,212 @@
+#home {
+    min-height: 100vh;
+    overflow: hidden;
+  
+    position: relative;
+    z-index: 2;
+  
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -10rem;
+  }
+
+#home::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  background: linear-gradient(45deg, #FC426A, #FF5349);
+  opacity: .7;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1), transparent 100%);
+
+}
+
+ #home video,
+ #home img.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+
+    filter: brightness(.5);
+
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1), transparent 100%);
+}
+
+#home .content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: end;
+}
+
+#home header {
+  width: 100%;
+  margin-bottom: 8rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+#home img.play {
+  width: 20rem;
+  margin-left: -2rem;
+  filter: brightness(1);
+
+  margin-bottom: 4rem;
+}
+
+#home h1 {
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 200;
+  text-align: left;
+  letter-spacing: 1.2rem;
+
+  position: relative;
+
+  margin-bottom: 2rem;
+}
+
+#home h1 span {
+  font-weight: 400;
+}
+
+
+#home h1::before {
+  content: '';
+  position: absolute;
+  width: 30%;
+  height: 2px;
+  background: linear-gradient(to right, #fff, #b4b4b4);
+  top: -2rem;
+  left: -20%;
+}
+
+#home .buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+
+  position: relative;
+}
+
+#home a {
+  text-decoration: none;
+}
+
+#home a button {
+  border: none;
+  padding: 1rem 3rem;
+  border-radius: .5rem;
+  font-size: 1.6rem;
+
+  background: transparent;
+  outline: 1px solid #fff;
+  color: #fff;
+
+  transition: all 200ms ease-in-out;
+}
+
+#home a:last-child button { 
+  background: linear-gradient(to right, #fff, #b4b4b4);
+  color: #000000;
+}
+
+#home a button:hover {
+  cursor: pointer;
+  filter: brightness(1.2);
+  background: #ffffff1e;
+}
+
+#home a:last-child button:hover {
+  background: linear-gradient(to right, #fff, #b4b4b4);
+}
+
+@media (min-width: 1080px) {
+  header#home .wrapper {
+    
+  }
+
+  header#home .content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header#home header {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  header#home img.play {
+    margin-left: initial;
+    width: 30rem;
+    margin-bottom: 0;
+  }
+
+  header#home .img {
+    position: relative;
+    margin-bottom: 3rem;
+  }
+
+  header#home .img::before,
+  header#home .img::after {
+    content: '';
+    position: absolute;
+    width: 30rem;
+    height: 2px;
+    transform: translate(0, -50%);
+    top: 45%;
+  }
+
+  header#home .img::before {
+    left: -100%;
+    background: linear-gradient(to right, transparent, #ffffffdc);
+  }
+
+  header#home .img::after {
+    right: -100%;
+    background: linear-gradient(to left, transparent, #ffffffdc);
+  }
+
+  header#home h1 {
+    font-size: 9rem;
+    text-align: center;
+    margin-bottom: 5rem;
+    line-height: 1.2;
+  }
+
+  header#home h1::before {
+    display: none;
+  }
+
+  header#home .content .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  
+    position: relative;
+  }
+}

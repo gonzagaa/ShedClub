@@ -1,0 +1,152 @@
+#banners {
+    background: var(--bg-color);
+    position: relative;
+
+    overflow: hidden;
+}
+
+#banners header {
+    margin-bottom: 5rem;
+}
+
+#banners header h2 {
+    color: var(--color-text);
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-family: var(--Adoha); 
+    font-weight: 500;
+}
+
+#banners header h2 span {
+    font-family: var(--Adoha); 
+
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+#banners header p {
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+#banners .cards {
+    border-radius: 1rem;
+}
+
+#banners .cards .card {
+    position: relative;
+    user-select: none;
+}
+
+#banners .cards .card img {
+    width: 100%;
+    aspect-ratio: 9/12;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+#banners .wrapper.carrossel {
+    position: relative;
+}
+
+#banners img.logo {
+    position: absolute;
+}
+
+#banners img.logo.um {
+    width: 9%;
+    right: 2%;
+    z-index: 1;
+    bottom: 0;
+
+    animation: Bg infinite ease-in-out 5s;
+}
+
+#banners img.logo.dois {
+    width: 35%;
+    opacity: .05;
+    filter: blur(3px);
+    z-index: 0;
+    top: -10%;
+    left: -5%;
+}
+
+@media (min-width: 1080px) {
+
+    /* section#banners .wrapper.carrossel {
+        width: 100%;
+        padding-inline: 0;
+    } */
+
+    section#banners header {
+        margin-bottom: 8rem;
+    }
+
+    section#banners header h2 {
+        font-size: 5.5rem;
+    }
+
+    section#banners header p {
+        font-size: 2rem;
+    }
+
+    section#banners .content .cards {
+        overflow: initial;
+        border-radius: 0;
+    }
+
+    section#banners .swiper {
+        position: relative;
+    }
+
+    section#banners .swiper:before,
+    section#banners .swiper:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 10rem;
+        height: 100%;
+        z-index: 2;
+    }
+    
+    section#banners .swiper:before {
+        left: 0;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0), #01010d);
+    }
+    
+    section#banners .swiper:after {
+        right: 0;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), #01010d);
+    }
+
+    section#banners .wrapper.carrossel {
+        position: relative;
+    }
+
+    section#banners img.logo {
+        display: inherit;
+        position: absolute;
+    }
+
+    section#banners img.logo.um {
+        width: 4%;
+        right: -1%;
+        z-index: 1;
+        bottom: -3rem;
+
+        animation: Bg infinite ease-in-out 5s;
+        
+    }
+
+    section#banners img.logo.dois {
+        width: 10%;
+        opacity: .05;
+        filter: blur(3px);
+        z-index: 0;
+        top: -15%;
+        left: -5%;
+    }
+}

@@ -1,0 +1,298 @@
+#programacao {
+    background: var(--bg-color);
+    position: relative;
+
+
+    overflow: hidden;
+}
+
+#programacao .wrapper {
+    position: relative;
+}
+
+#programacao header {
+    text-align: center;
+    margin-bottom: 8rem;
+}
+
+#programacao .content span.span {
+    font-size: 1.4rem;
+    color: #ffffffce;
+    font-weight: 400;
+
+    position: relative;
+}
+
+#programacao .content span.span::before,
+#programacao .content span.span::after {
+    content: '';
+    position: absolute;
+    width: 10rem;
+    height: 2px;
+    transform: translate(0, -50%);
+    top: 50%;
+}
+
+#programacao .content span.span::before {
+    left: -100%;
+    background: linear-gradient(to right, transparent, #FC426A);
+}
+
+#programacao .content span.span::after {
+    right: -100%;
+    background: linear-gradient(to left, transparent, #FC426A);
+}
+
+#programacao h2 {
+    margin-top: 3rem;
+    font-size: 3rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+#programacao .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+
+    border-radius: 2rem;
+    overflow: hidden;
+
+    box-shadow:  20px 20px 60px #01010b,
+             -20px -20px 60px #01011a;
+}
+
+#programacao .container .box {
+    width: 100%;
+    flex-grow: 1;
+    background-size: cover;
+    background-position: center;
+    transition: all 500ms ease-in-out;
+
+    height: 40vh;
+
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4rem;
+    text-align: left;
+
+    position: relative;
+}
+
+#programacao .container .box:hover {
+    width: 100%;
+}
+
+#programacao .container .box:nth-child(1) {
+    background-image: url(../assets/exemplo\ 1.png);
+}
+
+#programacao .container .box:nth-child(2) {
+    background-image: url(../assets/exemplo\ 2.png);
+}
+
+#programacao .container .box:nth-child(3) {
+    background-image: url(../assets/exemplo\ 3.png);
+}
+
+#programacao .container .box:nth-child(4) {
+    background-image: url(../assets/exemplo\ 4.png);
+}
+
+#programacao .container .box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; 
+    filter: brightness(.3);
+    z-index: 1; 
+    transition: all 500ms ease-in-out;
+}
+
+#programacao .container .box:hover::before {
+    filter: brightness(.15);
+}
+
+#programacao .container .box > * {
+    position: relative; 
+    z-index: 2;
+}
+
+#programacao .container .box h3 {
+    mix-blend-mode: difference;
+    font-size: 3.8rem;
+    color: #ffffffbf;
+    font-weight: 600;
+
+    margin-top: -5rem;
+    transition: all 2s ease-in-out;
+}
+
+#programacao .container .box:hover h3 {
+    color: #fff;
+}
+
+#programacao .container .box .additional-content {
+    transition: all 500ms ease-in-out;
+    z-index: 3; 
+    display: none; 
+
+    position: absolute;
+    bottom: 8%;
+}
+
+#programacao .container .box:hover .additional-content {
+    display: block; 
+}
+
+#programacao .container .box a {
+    text-decoration: none;
+}
+
+#programacao .container .box a button {
+    border: none;
+    background: transparent;
+
+    color: #ffffffc5;
+    font-size: 1.8rem;
+    font-weight: 300;
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    transition: all 200ms ease-in-out;
+}
+
+#programacao .container .box a button ion-icon {
+    transform: rotate(-45deg);
+    line-height: 0;
+    font-size: 2rem;
+
+    transition: all 200ms ease-in-out;
+}
+
+#programacao .container .box a button:hover {
+    cursor: pointer;
+    filter: brightness(1.5);
+    color: #fff;
+}
+
+#programacao .container .box a button:hover ion-icon {
+    transform: rotate(0) translateX(5px);
+}
+
+#programacao .container .box .date {
+    position: absolute;
+    left: 18%;
+    top: 0;
+    transform: translate(-50%, 0);
+
+    padding: 1rem;
+    background: #fff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+
+    transition: all 500ms ease-in-out;
+}
+
+#programacao .container .box:hover .date {
+    left: 90%;
+}
+
+#programacao .container .box .date h4 {
+    line-height: 1;
+    color: var(--bg-color);
+    font-size: 2.5rem;
+}
+
+#programacao .container .box .date p {
+    line-height: 1;
+    color: var(--bg-color);
+    font-size: 1.4rem;
+
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+@media (min-width: 1080px) {
+    section#programacao header {
+        text-align: center;
+        margin-bottom: 8rem;
+    }
+    
+    section#programacao .content span.span {
+        font-size: 1.6rem;
+        color: #ffffffce;
+        font-weight: 400;
+
+        position: relative;
+    }
+
+    section#programacao .content span.span::before,
+    section#programacao .content span.span::after {
+        width: 20rem;
+    }
+
+    section#programacao .content span.span::before {
+        left: -170%;
+    }
+
+    section#programacao .content span.span::after {
+        right: -170%;
+    }
+    
+    section#programacao h2 {
+        font-size: 5rem;
+    }
+
+    section#programacao .container {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+        width: 100%;
+    
+        border-radius: 2rem;
+        overflow: hidden;
+    
+        box-shadow:  20px 20px 60px #01010b,
+                 -20px -20px 60px #01011a;
+    }
+
+    section#programacao .container .box {
+        width: 25%;
+        flex-grow: 1;
+        background-size: cover;
+        background-position: center;
+        transition: all 500ms ease-in-out;
+    
+        height: 40vh;
+    
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+        padding: 4rem;
+        text-align: left;
+    
+        position: relative;
+    }
+
+    section#programacao .container .box:hover {
+        width: 40%;
+    }
+}

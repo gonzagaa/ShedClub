@@ -1,0 +1,395 @@
+
+/* NAVIGATION =================== */
+
+nav {
+  display: flex;
+
+  height: var(--nav-height);
+
+  position: fixed;
+
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  background-color: rgba(23, 23, 23, 0.404);
+  border-radius: 0;
+  border: 3px solid rgba(63, 63, 63, 0.125);
+
+  width: 100vw;
+  z-index: 30;
+  transition: all 300ms ease-in-out;
+}
+
+nav .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav button path {
+  stroke: var(--color-text);
+}
+
+nav path {
+  stroke: var(--color-text);
+}
+
+nav .logo img {
+  width: 7rem;
+}
+
+nav button {
+  background: none;
+  border: none;
+}
+
+nav button:hover {
+  background: transparent;
+}
+
+nav .menu,
+nav .close-menu {
+  position: fixed;
+}
+
+/* NAVIGATION ON SCROLL =================== */
+nav.scroll {
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  background-color: rgba(0, 0, 0, 0.486);
+  border-radius: 0;
+  border: 1px solid rgba(63, 63, 63, 0.125);
+}
+
+nav.scroll path {
+  stroke: var(--color-text);
+}
+
+/* MENU EXPANDED =================== */
+body.menu-expanded {
+  overflow: hidden;
+}
+
+.menu,
+.close-menu,
+body.menu-expanded .open-menu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.menu-expanded .menu,
+body.menu-expanded .close-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu {
+  transform: translateX(100%);
+}
+
+body.menu-expanded .menu {
+  top: 0;
+  right: 0;
+
+  backdrop-filter: blur(50px) saturate(180%);
+  -webkit-backdrop-filter: blur(50px) saturate(180%);
+  background-color: rgba(0, 0, 0, 0.938);
+  border-radius: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding-top: var(--nav-height);
+
+  transition: transform 400ms ease-out;
+  transform: translateX(0);
+}
+
+.menu ul:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+
+  margin-bottom: 6rem;
+
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 3.1rem;
+} 
+
+.menu ul li a {
+  color: var(--color-text);
+  text-decoration: none;
+
+  transition: all 200ms ease-in-out;
+}
+
+.menu ul li a:hover {
+  color: var(--primary-color);
+}
+
+.menu .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.menu .buttons button {
+  padding: 1.5rem 2.5rem;
+  font-size: 1.8rem;
+  border-radius: 1rem;
+  border: none;
+  font-weight: 600;
+}
+
+.menu .buttons a:nth-child(1) button {
+  background: var(--gradient);
+  color: var(--color-text);
+  outline: 1px solid var(--primary-color);
+  animation: gradient 3s ease infinite;
+  background-size: 150% 150%;
+}
+
+.menu .buttons  a:nth-child(2) button {
+  background: transparent;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  outline: 1px solid var(--color-text);
+  color: var(--color-text);
+}
+
+.menu .buttons button:hover {
+  background-color: transparent;
+  outline: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+}
+
+body.menu-expanded .logo,
+body.menu-expanded nav button {
+  position: relative;
+  z-index: 100;
+}
+
+body.menu-expanded button path {
+  stroke: var(--color-text);
+}
+
+/* RESPONSIVE =================== */
+@media (min-width: 768px) {
+.wrapper {
+  width: min(76rem, 100%);
+}
+}
+
+@media (min-width: 1080px) {
+  /* reset =================== */
+    nav#navigation .wrapper * {
+      margin: 0;
+      padding: 0;
+      visibility: initial;
+      display: initial;
+      opacity: initial;
+      flex-direction: initial;
+      position: initial;
+      font-weight: initial;
+      font-size: initial;
+      transform: initial;
+      color: initial;
+      background-color: initial;
+    }
+
+    nav#navigation {
+      width: calc(100% - 200px);
+      left: 100px;
+      border-radius: 2rem;
+      top: 4rem;
+    }
+
+    nav#navigation .logo {
+      margin-bottom: -.5rem;
+    }
+  
+    nav#navigation .close-menu,
+    nav#navigation .open-menu,
+    nav#navigation .social-links {
+      display: none;
+    }
+  
+    nav#navigation .menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 81%;
+    }
+  
+    nav#navigation .menu ul:nth-child(1) {
+      display: flex;
+      gap: 3.2rem;
+    } 
+  
+    nav#navigation .menu ul li a {
+      font-weight: 600;
+      text-transform: uppercase;
+      opacity: 1;
+    }
+
+    nav#navigation .menu ul li a:hover {
+      color: var(--primary-color);
+      opacity: 1;
+    }
+
+    nav#navigation .menu a {
+      color: #111111;
+      text-decoration: none;
+    }
+
+    nav#navigation .menu .buttons {
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav#navigation .menu .buttons a:nth-child(2) button {
+      background: transparent;
+      color: #fff;
+      border-left: 1px solid #fff;
+      border-right: 1px solid #fff;
+      outline: none;
+      transition: all 300ms ease-in-out;
+    }
+
+    nav#navigation .menu .buttons a:nth-child(2) button:hover {
+      filter: brightness(1.2);
+      background: #ffffff1d;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      border-left: 1px solid #fff; 
+      border-right: 1px solid #fff;
+    }
+
+    nav#navigation .menu a button {
+      color: #111111;
+      background: #fff;
+      border-radius: .5rem;
+      padding: 1.5rem 2rem;
+
+      transition: all 300ms ease-in-out;
+      font-weight: 700;
+
+      position: relative;
+      outline: none;
+    }
+
+    nav#navigation .menu .buttons a:nth-child(1) button:hover {
+      cursor: pointer;
+      outline: none;
+      border: none;
+      animation: gradient 2s ease infinite;
+      background-size: 200% 200%;  
+      filter: brightness(1.1);
+    }
+
+    nav#navigation.scroll .menu a button {
+      opacity: .9;
+    }
+
+    nav#navigation .menu ul li:nth-child(6) {
+      animation: entering 400ms ease-in-out backwards;
+    }
+
+    nav#navigation .menu ul li:nth-child(5) {
+      animation: entering 400ms ease-in-out;
+      animation-delay: 200ms;
+    }
+
+    nav#navigation .menu ul li:nth-child(4) {
+      animation: entering 400ms ease-in-out backwards;
+      animation-delay: 400ms;
+    }
+
+    nav#navigation .menu ul li:nth-child(3) {
+      animation: entering 400ms ease-in-out backwards;
+      animation-delay: 600ms;
+    }
+
+    nav#navigation .menu ul li:nth-child(2) {
+      animation: entering 400ms ease-in-out backwards;
+      animation-delay: 800ms;
+    }
+  
+    nav#navigation .menu ul li:nth-child(1) {
+      animation: entering 400ms ease-in-out backwards;
+      animation-delay: 1000ms;
+    }
+  
+  
+    nav#navigation .menu li a {
+      transition: all 300ms;
+      color: var(--color-text);
+    }
+  
+    nav#navigation .menu li a::after {
+      content: '';
+      width: 0%;
+      height: 3px;
+      background-color: var(--primary-color);
+  
+      position: relative;
+      bottom: -2rem;
+      left: -1rem;
+      display: block;
+  
+      transition: width 200ms ease-in-out;
+    }
+  
+    nav#navigation .menu li a:hover::after {
+      padding-inline: 1rem;
+      width: 100%;
+    }
+
+    .wrapper {
+      width: min(112rem, 100%);
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .wrapper {
+      width: min(140rem, 100%);
+    }
+  }
+
+  @media (min-width: 1700px) {
+    .wrapper {
+      width: min(150rem, 100%);
+    }
+
+    nav#navigation .menu {
+      width: 65%;
+    }
+  }
+
+/* ANIMATIONS =================== */
+
+@keyframes entering {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

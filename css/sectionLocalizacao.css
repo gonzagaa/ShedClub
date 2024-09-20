@@ -1,0 +1,36 @@
+#localizacao {
+    background: var(--bg-color);
+    position: relative;
+    overflow: hidden;
+}
+  
+  #localizacao .mapa {
+    height: 30rem;
+    padding-inline: 2.4rem;
+  }
+  
+  #localizacao .mapa iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+  }
+
+  @media (min-width: 1080px) {
+    section#localizacao {
+        padding-block: 0;
+        padding-top: 8rem;
+        padding-bottom: 0;
+    }
+
+    section#localizacao .mapa {
+        padding-inline: initial;
+      }
+    
+      section#localizacao .mapa iframe {
+        border-radius: 0;
+        height: 100%;
+        width: 100%;
+      }
+  }
+
+  
