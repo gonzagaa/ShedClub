@@ -246,7 +246,7 @@ body.menu-expanded button path {
     }
 
     nav#navigation .menu ul li a:hover {
-      color: var(--primary-color);
+      color: #fff;
       opacity: 1;
     }
 
