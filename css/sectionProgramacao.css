@@ -88,19 +88,18 @@
 }
 
 #programacao .container .box:nth-child(1) {
-    background-image: url(../assets/exemplo\ 1.webp);
+    background-image: url(../assets/JuniorMarques.webp);
+    background-position-y: 25%;
 }
 
 #programacao .container .box:nth-child(2) {
-    background-image: url(../assets/exemplo\ 2.webp);
+    background-image: url(../assets/pauloenathan.webp);
+    background-position-y: 25%;
 }
 
 #programacao .container .box:nth-child(3) {
-    background-image: url(../assets/exemplo\ 3.webp);
-}
-
-#programacao .container .box:nth-child(4) {
-    background-image: url(../assets/exemplo\ 4.webp);
+    background-image: url(../assets/rafaelquadros.webp);
+    background-position-y: 25%;
 }
 
 #programacao .container .box::before {
@@ -127,12 +126,15 @@
 
 #programacao .container .box h3 {
     mix-blend-mode: difference;
-    font-size: 3.8rem;
+    font-size: 3rem;
     color: #ffffffbf;
     font-weight: 600;
 
-    margin-top: -5rem;
     transition: all 2s ease-in-out;
+
+    height: 100%;
+
+    margin-top: 5rem;
 }
 
 #programacao .container .box:hover h3 {
@@ -280,7 +282,7 @@
         background-position: center;
         transition: all 500ms ease-in-out;
     
-        height: 40vh;
+        height: 50vh;
     
         display: flex;
         align-items: start;
@@ -294,5 +296,10 @@
 
     section#programacao .container .box:hover {
         width: 40%;
+    }
+
+    section#programacao .container .box h3 {
+        font-size: 3.5rem;
+        margin-top: 8rem;
     }
 }
