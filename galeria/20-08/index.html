@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shedclub Goiânia</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/index.css">
+    <link rel="shortcut icon" href="../../assets/logo shed vertical branca.png" type="image/x-icon">
+
+    <script src="https://kit.fontawesome.com/40e1b7901b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <nav id="navigation" class="">
+        <div class="wrapper">
+
+            <a class="logo" href="../../index.html#home">
+                <img  src="../../assets/logo shed horizontal branca.png" alt="Logo">
+            </a>
+            
+            <div class="menu">
+
+                <ul>
+                    <li data-aos="fade-right"><a onclick="closeMenu()" href="../../index.html#home">Home</a></li>
+                    <li data-aos="fade-right"><a onclick="closeMenu()" href="../../index.html#programacao">Programação</a></li>
+                    <li data-aos="fade-right"><a onclick="closeMenu()" href="../../index.html#galeria">Galeria</a></li>
+                    <li data-aos="fade-right"><a onclick="closeMenu()" href="../../index.html#reservas">Reservas</a></li>
+                    <li data-aos="fade-right"><a target="_blank" onclick="closeMenu()" href="https://dguests.com/shedgoiania">LISTA</a></li>
+                </ul>
+
+                <div data-aos="fade-right" class="buttons">
+                    <a onclick="closeMenu()" class="button" target="_blank" href="https://api.whatsapp.com/send?phone=+5562998208345&text=Ol%C3%A1,%20tenho%20uma%20d%C3%BAvida!"><button>
+                        CONTATO
+                    </button></a>
+                </div>
+             </div>
+
+            <button 
+            aria-expanded="false"
+            aria-label="Abrir menu"
+            onclick="openMenu()" 
+            class="open-menu">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 20H30" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10 12H30" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18 28L30 28" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg> 
+            </button>
+            <button
+            aria-expanded="true"
+            aria-label="Fechar menu"
+            onclick="closeMenu()" 
+            class="close-menu">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30 10L10 30M10 10L30 30" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                        
+            </button>
+
+        </div>       
+    </nav>
+
+    <section class="gallery">
+            <div class="coluna">
+                <img src="../../assets/galeria/20-08/_IME4596.JPG" alt="Imagem 1">
+
+                <img src="../../assets/galeria/20-08/_IME4602.JPG" alt="Imagem 2">
+
+                <img src="../../assets/galeria/20-08/_IME4608_1.JPG" alt="Imagem 3">
+
+                <img src="../../assets/galeria/20-08/_IME4611.JPG" alt="Imagem 4">
+
+                <img src="../../assets/galeria/20-08/_IME4613.JPG" alt="Imagem 5">
+
+                <img src="../../assets/galeria/20-08/_IME4621.JPG" alt="Imagem 6">
+            </div>
+
+            <div class="coluna centro">
+                <img src="../../assets/galeria/20-08/_IME4628.JPG" alt="Imagem 7">
+
+                <img src="../../assets/galeria/20-08/_IME4636.JPG" alt="Imagem 8">
+
+                <img src="../../assets/galeria/20-08/_IME4668.JPG" alt="Imagem 9">
+            </div>
+
+            <div class="coluna">
+                <img src="../../assets/galeria/20-08/_IME4793.JPG" alt="Imagem 10">
+
+                <img src="../../assets/galeria/20-08/_IME4829.JPG" alt="Imagem 11">
+
+                <img src="../../assets/galeria/20-08/_IME4830.JPG" alt="Imagem 12">
+
+                <img src="../../assets/galeria/20-08/_IME4856.JPG" alt="Imagem 13">
+
+                <img src="../../assets/galeria/20-08/_IME4868.JPG" alt="Imagem 14">
+
+                <img src="../../assets/galeria/20-08/_IME4868_1.JPG" alt="Imagem 15">
+            </div>
+    </section>
+
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../../script.js"></script>
+</body>
+</html> 
