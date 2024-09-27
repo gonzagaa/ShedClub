@@ -1,0 +1,48 @@
+.gallery {
+    grid-template-columns: 1fr;
+    display: grid;
+    width: 100%;
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    object-fit: cover;
+
+    filter: brightness(.7) saturate(110%) contrast(110%);
+
+    transition: all 200ms ease-in-out;
+}
+
+.gallery img:hover {
+    filter: brightness(1);
+}
+
+@media (min-width: 1080px) {
+    /* Responsivo: Em telas menores, todas as imagens ficam em uma única coluna */
+    section.gallery {
+        margin-top: 6rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0;
+    }
+
+    section.gallery .coluna {
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    section.gallery .coluna img {
+        aspect-ratio: 16/10;
+    }
+
+    section.gallery .coluna.centro {
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    section.gallery .coluna.centro img {
+        aspect-ratio: 12.7/16;
+    }
+
+    .gallery img {
+        aspect-ratio: auto;
+    }
+}
