@@ -88,17 +88,17 @@
 }
 
 #programacao .container .box:nth-child(1) {
-    background-image: url(../assets/rickerangel.webp);
+    background-image: url(../assets/flyers/1010.webp);
     background-position-y: 25%;
 }
 
 #programacao .container .box:nth-child(2) {
-    background-image: url(../assets/thaleslessa.webp);
+    background-image: url(../assets/flyers/1110.webp);
     background-position-y: 25%;
 }
 
 #programacao .container .box:nth-child(3) {
-    background-image: url(../assets/martijn.webp);
+    background-image: url(../assets/flyers/1210.webp);
     background-position-y: 25%;
 }
 
