@@ -88,17 +88,17 @@
 }
 
 #programacao .container .box:nth-child(1) {
-    background-image: url(../assets/flyers/1010.webp);
+    background-image: url(../assets/flyers/QUINTA_17-10.webp);
     background-position-y: 25%;
 }
 
 #programacao .container .box:nth-child(2) {
-    background-image: url(../assets/flyers/1110.webp);
+    background-image: url(../assets/flyers/SEXTA_18-10.webp);
     background-position-y: 25%;
 }
 
 #programacao .container .box:nth-child(3) {
-    background-image: url(../assets/flyers/1210.webp);
+    background-image: url(../assets/flyers/SABADO_18-10.webp);
     background-position-y: 25%;
 }
 
