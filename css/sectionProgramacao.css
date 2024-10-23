@@ -88,17 +88,17 @@
 }
 
 #programacao .container .box:nth-child(1) {
-    background-image: url(../assets/flyers/QUINTA_17-10.webp);
+    background-image: url(../assets/flyers/AGENDA_QUARTA-23.webp);
     background-position-y: 25%;
 }
 
 #programacao .container .box:nth-child(2) {
-    background-image: url(../assets/flyers/SEXTA_18-10.webp);
+    background-image: url(../assets/flyers/AGENDA_25-SEX.webp);
     background-position-y: 25%;
 }
 
 #programacao .container .box:nth-child(3) {
-    background-image: url(../assets/flyers/SABADO_18-10.webp);
+    background-image: url(../assets/flyers/AGENDA_26-SAB.webp);
     background-position-y: 25%;
 }
 
